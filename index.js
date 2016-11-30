@@ -43,4 +43,10 @@ module.exports.stdin = function(callback, format) {
   return module.exports;
 }
 
+module.exports.stdin_get = function(path) {
+  module.exports.stdin(function(obj) {
+    stdout(_.get(obj, path));
+  }, 'json');
+}
+
 global.curt = module.exports;

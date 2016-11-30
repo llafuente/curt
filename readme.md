@@ -29,6 +29,10 @@ read everything from stdin and call callback with it.
 
 format: json, null
 
+> require("curt").stdin_get(json_path)
+
+read everything from stdin (json) and print given path
+
 > require("curt").escape(arg)
 
 Escape argument for bash usage
